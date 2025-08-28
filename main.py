@@ -74,7 +74,7 @@ auto_flags = {}
 auto_clicked = False
 
 # Global variables
-watermark = "UG"  # Default value
+watermark = "GovtXExam"  # Default value
 count = 0
 userbot = None
 timeout_duration = 300  # 5 minutes
@@ -930,21 +930,21 @@ async def txt_handler(bot: Client, m: Message):
                     v_name = re.sub(r"[-:|–—_\s]*https?.*", "", v_name).strip()
 
 
-                    cc = f'─────  VID ID : {str(count).zfill(3)}  ─────\n\n🎥 **ᴛɪᴛʟᴇ** :{v_name}.mp4\n\n<blockquote><b>💠 **ʙᴀᴛᴄʜ** : {b_name}\n\n📝 **ᴛᴏᴘɪᴄ** : {t_name}</b></blockquote>\n\n📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ ➤ {CR}\n'
-                    cc1 = f'───── PDF ID : {str(count).zfill(3)} ─────\n\n📑 **ᴛɪᴛʟᴇ** :{v_name} .pdf\n\n<blockquote><b>💠 **ʙᴀᴛᴄʜ** : {b_name}\n\n📝 **ᴛᴏᴘɪᴄ** : {t_name}</b></blockquote>\n\n📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ ➤ {CR}\n'
-                    cczip = f'─────  Zip Id : {str(count).zfill(3)}  ─────\n\n📁 **ᴛɪᴛʟᴇ** :{v_name} .zip\n\n<blockquote><b>💠 **ʙᴀᴛᴄʜ** : {b_name}\n\n📝 **ᴛᴏᴘɪᴄ** : {t_name}</b></blockquote>\n\n📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ ➤ {CR}\n'
-                    ccimg = f'─────  Img Id : {str(count).zfill(3)}  ─────\n\n🖼️ **ᴛɪᴛʟᴇ** :{v_name} .jpg\n\n<blockquote><b>💠 **ʙᴀᴛᴄʜ** : {b_name}\n\n📝 **ᴛᴏᴘɪᴄ** : {t_name}</b></blockquote>\n\n📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ ➤ {CR}\n'
-                    cchtml = f'─────  Html Id : {str(count).zfill(3)}  ─────\n\n🌐 **ᴛɪᴛʟᴇ** :{v_name} .html\n\n<blockquote><b>💠 **ʙᴀᴛᴄʜ** : {b_name}\n\n📝 **ᴛᴏᴘɪᴄ** : {t_name}</b></blockquote>\n\n📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ ➤ {CR}\n'
+                    cc = f'🏷️ Fɪʟᴇ ID : {str(count).zfill(3)}  ─────\n\n🎥 **ᴛɪᴛʟᴇ** :{v_name}.mp4\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** : {b_name}\n\n📝 **ᴛᴏᴘɪᴄ** : {t_name}</b></blockquote>\n\n📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ ➤ {CR}\n'
+                    cc1 = f'───── PDF ID : {str(count).zfill(3)} ─────\n\n📑 **ᴛɪᴛʟᴇ** :{v_name} .pdf\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** : {b_name}\n\n📝 **ᴛᴏᴘɪᴄ** : {t_name}</b></blockquote>\n\n📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ ➤ {CR}\n'
+                    cczip = f'─────  Zip Id : {str(count).zfill(3)}  ─────\n\n📁 **ᴛɪᴛʟᴇ** :{v_name} .zip\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** : {b_name}\n\n📝 **ᴛᴏᴘɪᴄ** : {t_name}</b></blockquote>\n\n📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ ➤ {CR}\n'
+                    ccimg = f'─────  Img Id : {str(count).zfill(3)}  ─────\n\n🖼️ **ᴛɪᴛʟᴇ** :{v_name} .jpg\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** : {b_name}\n\n📝 **ᴛᴏᴘɪᴄ** : {t_name}</b></blockquote>\n\n📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ ➤ {CR}\n'
+                    cchtml = f'─────  Html Id : {str(count).zfill(3)}  ─────\n\n🌐 **ᴛɪᴛʟᴇ** :{v_name} .html\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** : {b_name}\n\n📝 **ᴛᴏᴘɪᴄ** : {t_name}</b></blockquote>\n\n📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ ➤ {CR}\n'
                     ccyt = f'─────  VID ID : {str(count).zfill(3)}  ─────\n\n🎥 **ᴛɪᴛʟᴇ** :{v_name} .mp4\n\n<a href="{url}">__**Click Here to Watch Stream**__</a>\n<blockquote><b>💠 **ʙᴀᴛᴄʜ** : {b_name}\n\n📝 **ᴛᴏᴘɪᴄ** : {t_name}</b></blockquote>\n\n📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ ➤ {CR}\n'
 
 
                 else:
-                    cc = f'─────  VID ID : {str(count).zfill(3)}  ─────\n\n🎥 ᴛɪᴛʟᴇ :{name1} [{res}p] .mp4\n\n<blockquote><b>💠 ʙᴀᴛᴄʜ :</b> {b_name}</blockquote>\n\n📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ ➤ {CR}\n'
-                    cc1 = f'───── PDF ID : {str(count).zfill(3)} ─────\n\n📑 ᴛɪᴛʟᴇ :{name1} .pdf\n\n<blockquote><b>💠 ʙᴀᴛᴄʜ :</b> {b_name}</blockquote>\n\n📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ ➤ {CR}\n'
-                    cczip = f'─────  Zip Id : {str(count).zfill(3)}  ─────\n\n📁 ᴛɪᴛʟᴇ :{name1} .zip\n\n<blockquote><b>💠 ʙᴀᴛᴄʜ :</b> {b_name}</blockquote>\n\n📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ ➤ {CR}\n'
-                    ccimg = f'─────  Img Id : {str(count).zfill(3)}  ─────\n\n🖼️ ᴛɪᴛʟᴇ :{name1} .jpg\n\n<blockquote><b>💠 ʙᴀᴛᴄʜ :</b> {b_name}</blockquote>\n\n📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ ➤ {CR}\n'
-                    ccm = f'─────  Audio Id : {str(count).zfill(3)}  ─────\n\n🎵 ᴛɪᴛʟᴇ :{name1} .mp3\n\n<blockquote><b>💠 ʙᴀᴛᴄʜ :</b> {b_name}</blockquote>\n\n📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ ➤ {CR}\n'
-                    cchtml = f'─────  Html Id : {str(count).zfill(3)}  ─────\n\n🌐 ᴛɪᴛʟᴇ :{name1} .html\n\n<blockquote><b>💠 ʙᴀᴛᴄʜ :</b> {b_name}</blockquote>\n\n📥 ᴇxᴛʀᴀᴄᴛᴇᴅ ʙʏ ➤ {CR}\n'
+                    cc = f'🏷️ **Fɪʟᴇ ID : {str(count).zfill(3)}** \n\n🎞️ Tɪᴛʟᴇ :{name1} [{res}p] .mp4\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** :</b> {b_name}</blockquote>\n\n🎓 Exᴛʀᴀᴄᴛ Bʏ ➤ {CR}\n'
+                    cc1 = f'🏷️ **Fɪʟᴇ ID : {str(count).zfill(3)}** \n\n📝 Tɪᴛʟᴇ :{name1} .pdf\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** :</b> {b_name}</blockquote>\n\n🎓 Exᴛʀᴀᴄᴛ Bʏ ➤ {CR}\n'
+                    cczip = f'🏷️ **Fɪʟᴇ ID : {str(count).zfill(3)}** \n\n💾 Tɪᴛʟᴇ :{name1} .zip\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** :</b> {b_name}</blockquote>\n\n🎓 Exᴛʀᴀᴄᴛ Bʏ ➤ {CR}\n'
+                    ccimg = f'🏷️ **Fɪʟᴇ ID : {str(count).zfill(3)}** \n\n🖼️ Tɪᴛʟᴇ :{name1} .jpg\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** :</b> {b_name}</blockquote>\n\n🎓 Exᴛʀᴀᴄᴛ Bʏ ➤ {CR}\n'
+                    ccm = f'🏷️ **Fɪʟᴇ ID : {str(count).zfill(3)}** \n\n🎵 Tɪᴛʟᴇ :{name1} .mp3\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** :</b> {b_name}</blockquote>\n\n🎓 Exᴛʀᴀᴄᴛ Bʏ➤ {CR}\n'
+                    cchtml = f'🏷️ **Fɪʟᴇ ID : {str(count).zfill(3)}** \n\n🌐 Tɪᴛʟᴇ :{name1} .html\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** :</b> {b_name}</blockquote>\n\n🎓 Exᴛʀᴀᴄᴛ Bʏ ➤ {CR}\n'
           
                 if "drive" in url:
                     try:
