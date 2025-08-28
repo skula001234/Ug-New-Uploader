@@ -108,16 +108,16 @@ async def progress_bar(current, total, reply, start):
 
     msg = (
         f"╭───⌯═════ 𝐁𝐎𝐓 𝐏𝐑𝐎𝐆𝐑𝐄𝐒𝐒 ═════⌯\n"
-        f"├ ⚡ {progress_bar_str}\n\n"
-        f"├ ⚙️ 𝗣𝗥𝗢𝗚𝗥𝗘𝗦𝗦 ➤ | {percent:.1f}%\n\n"
-        f"├ 🚀 𝗦𝗣𝗘𝗘𝗗 ➤ | {hrb(speed)}/s\n\n"
-        f"├ 📟 𝗣𝗥𝗢𝗖𝗘𝗦𝗦𝗘𝗗 ➤ | {hrb(current)}\n\n"
-        f"├ 🧲 𝗦𝗜𝗭𝗘 ➤ | {hrb(total)}\n\n"
+        f"├  **{percent:.1f}%** `{progress_bar_str}`\n\n"
+        f"├ 🚀 𝗦𝗣𝗘𝗘𝗗 ➤ | {hrb(speed)}/s"
+        f"├ 📟 𝗣𝗥𝗢𝗖𝗘𝗦𝗦𝗘𝗗 ➤ | {hrb(current)}"
+        f"├ 🧲 𝗦𝗜𝗭𝗘 ➤ | {hrb(total)}"
         f"├ 🕑 𝗘𝗧𝗔 ➤ | {hrt(eta_seconds, 1)}\n"
-        f"╰─═══✨🦋 {CREDIT} 🦋✨═══─╯"
+        f"╰─═══ [⌯ FʀᴏɴᴛMᴀɴ | ×͜× |](https://t.me/mrfrontman001)═══─╯"
     )
 
     try:
         await reply.edit(msg)
     except FloodWait as e:
         time.sleep(e.x)
+
