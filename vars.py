@@ -2,19 +2,19 @@ import os
 from os import environ
 
 # API Configuration
-API_ID = int(os.environ.get("API_ID", "27567486"))
-API_HASH = os.environ.get("API_HASH", "b1760d4b5ef697bb8da4e7ac4e261c49")
+API_ID = int(os.environ.get("API_ID", "22422690"))
+API_HASH = os.environ.get("API_HASH", "2884fbc53b44a1bbcfa7c525e185c1aa")
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "7806918723:AAGZXfu6AFeDvpr9jyU9ENcUzbx4u3tz9O4")
 
-CREDIT = os.environ.get("CREDIT", "〱ＵＧ▕")
+CREDIT = os.environ.get("CREDIT", "⌯ FʀᴏɴᴛMᴀɴ | ×͜× |")
 # MongoDB Configuration
 DATABASE_NAME = os.environ.get("DATABASE_NAME", "UGxPRO")
 DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://ugisalive:ugisalive@ugisalive.ypsqmlf.mongodb.net/?retryWrites=true&w=majority&appName=ugisalive")
 MONGO_URL = DATABASE_URL  # For auth system
 
 # Owner and Admin Configuration
-OWNER_ID = int(os.environ.get("OWNER_ID", "7641464333"))
-ADMINS = [int(x) for x in os.environ.get("ADMINS", "7641464333").split()]  # Default to owner ID
+OWNER_ID = int(os.environ.get("OWNER_ID", "7793257011"))
+ADMINS = [int(x) for x in os.environ.get("ADMINS", "7793257011").split()]  # Default to owner ID
 
 # Channel Configuration
 PREMIUM_CHANNEL = "https://t.me/+W-Q51EuLf2QwYTRl"
@@ -58,4 +58,5 @@ Please contact the admin @ItsUGBot to get access.</blockquote>""",
     "invalid_format": """❌ <b>Invalid Format!</b>
 
 <blockquote>Use format: {format}</blockquote>"""
+
 }
