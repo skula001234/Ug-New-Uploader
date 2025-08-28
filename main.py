@@ -518,7 +518,7 @@ async def txt_handler(bot: Client, m: Message):
     
     chat_id = editable.chat.id
     timeout_duration = 3 if auto_flags.get(chat_id) else 20
-    await editable.edit("__**Enter resolution or Video Quality (`144`, `240`, `360`, `480`, `720`, `1080`)**__")
+    await editable.edit("**1. Send Video Resolution \n 2. Send Video Quality\n⏩ `360` | `480` | `720` | `1080`**")
     try:
         input2: Message = await bot.listen(editable.chat.id, timeout=timeout_duration)
         raw_text2 = input2.text
@@ -577,7 +577,7 @@ async def txt_handler(bot: Client, m: Message):
         CR = raw_text3
     chat_id = editable.chat.id
     timeout_duration = 3 if auto_flags.get(chat_id) else 20
-    await editable.edit(f"**send the token of __PW__ IF Aap purchased batch upload krne wale to uska token lgega new vrnaa `/d` krdo**")
+    await editable.edit(f"**1. Send Token For Encrypt txys like PW \n2. Send \d if uploading normal TXTS**")
     try:
         input4: Message = await bot.listen(editable.chat.id, timeout=timeout_duration)
         raw_text4 = input4.text
@@ -593,7 +593,7 @@ async def txt_handler(bot: Client, m: Message):
         await editable.edit("**Using AUTO Topic Uploader**\n\n<blockquote><b>Topic will be fetched by Automatically...</b></blockquote>")
         raw_text5 = "yes"
     else:
-        await editable.edit("**If you want topic wise uploader : send `yes` or send /d \n\n")
+        await editable.edit("**1. Send `yes` For Topic Wise Uploading \n2. Send /d For default uploading** \n\n")
         try:
             input5: Message = await bot.listen(chat_id, timeout=timeout_duration)
             raw_text5 = input5.text
@@ -625,11 +625,11 @@ async def txt_handler(bot: Client, m: Message):
         elif input6.text:
             if input6.text == "/d":
                 thumb = "/d"
-                await editable.edit("**ℹ️ Using default thumbnail.**")
+                await editable.edit("**🖼️ Using default thumbnail.**")
                 await asyncio.sleep(1)
             elif input6.text == "/skip":
                 thumb = "no"
-                await editable.edit("**ℹ️ Skipping thumbnail.**")
+                await editable.edit("**⏭️ Skipping thumbnail.**")
                 await asyncio.sleep(1)
             else:
                 await editable.edit("**⚠️ Invalid input! Using default thumbnail.**")
@@ -643,7 +643,7 @@ async def txt_handler(bot: Client, m: Message):
         await editable.edit("**⚠️ Error! Using default thumbnail.**")
         await asyncio.sleep(1)
  
-    await editable.edit("__**1. Send /d For Uploading Files In Chat\n 2. Send Channel Id For Uploading in Channel 3. Send Group Id For Topic Wise Upload \n\n Make Me Admin in your channel & send /id in channel after you get a numerical id send that me**")
+    await editable.edit("__**1. Send /d For Uploading Files In Chat\n2. Send Channel Id For Uploading in Channel 3. Send Group Id For Topic Wise Upload** \n\n<pre>Make Me Admin in your channel & send /id in channel after you get a numerical id send that me</pre>")
     try:
         input7: Message = await bot.listen(editable.chat.id, timeout=timeout_duration)
         raw_text7 = input7.text
