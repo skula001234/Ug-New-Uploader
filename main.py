@@ -482,7 +482,7 @@ async def txt_handler(bot: Client, m: Message):
     f"ZIP : {zip_count}   Drm : {drm_count}   m3u8 : {m3u8_count}\n"
     f"mpd : {mpd_count}   YT : {yt_count}\n"
     f"Other : {other_count}\n\n"
-    f"Send from where you want to download. Initial is 1**",
+    f"Send from where you want to download. Initial is `1`**",
   
 )
     
@@ -546,7 +546,7 @@ async def txt_handler(bot: Client, m: Message):
     chat_id = editable.chat.id
     timeout_duration = 3 if auto_flags.get(chat_id) else 20
 
-    await editable.edit("**Enter watermark text or send `/d`**")
+    await editable.edit("**1. 🆎 Enter watermark text \n2. 🖼️ Send /d for default watermark**")
     try:
         inputx: Message = await bot.listen(editable.chat.id, timeout=timeout_duration)
         raw_textx = inputx.text
@@ -557,11 +557,11 @@ async def txt_handler(bot: Client, m: Message):
     # Define watermark variable based on input
     global watermark
     if raw_textx == '/d':
-        watermark = "UG"
+        watermark = "GovtXExam"
     else:
         watermark = raw_textx
     
-    await editable.edit(f"__**Enter the Credit Name, Jo caption me likha aayega Extracted By YourName, Default rkhna he to `/d` krdo**")
+    await editable.edit(f"__**1. Enter Credit Name For Caption\n2. Send /d Default Credit**")
     try:
         input3: Message = await bot.listen(editable.chat.id, timeout=timeout_duration)
         raw_text3 = input3.text
@@ -601,7 +601,7 @@ async def txt_handler(bot: Client, m: Message):
         except asyncio.TimeoutError:
             raw_text5 = "/d"
 
-    await editable.edit("**Video Thumbnail:**\n\n•Photo Bhejo Jisko Thumbnail rkhna he  vrna fir.. \n• Send `/d` for default thumbnail\n")
+    await editable.edit("**1. Send Photo or Photo URL for Thumbnail\n 2. Send /d for default Thumbnail**\n")
     thumb = "/d"  # Set default value
     try:
         input6 = await bot.listen(chat_id=m.chat.id, timeout=timeout_duration)
@@ -643,7 +643,7 @@ async def txt_handler(bot: Client, m: Message):
         await editable.edit("**⚠️ Error! Using default thumbnail.**")
         await asyncio.sleep(1)
  
-    await editable.edit("__**⚠️Provide the Channel ID or send /d__\n\n Channel me jao bot ko admin bnao and `/id` kro channel me... \n\n Wo jo id de usko muje send kro...\n\n Wrna `/d` agr bot me hee upload krvana he **")
+    await editable.edit("__**1. Send /d For Uploading Files In Chat\n 2. Send Channel Id For Uploading in Channel 3. Send Group Id For Topic Wise Upload \n\n Make Me Admin in your channel & send /id in channel after you get a numerical id send that me**")
     try:
         input7: Message = await bot.listen(editable.chat.id, timeout=timeout_duration)
         raw_text7 = input7.text
@@ -939,12 +939,12 @@ async def txt_handler(bot: Client, m: Message):
 
 
                 else:
-                    cc = f'🏷️ **Fɪʟᴇ ID : {str(count).zfill(3)}** \n\n🎞️ Tɪᴛʟᴇ :{name1} [{res}p] .mp4\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** :</b> {b_name}</blockquote>\n\n🎓 Exᴛʀᴀᴄᴛ Bʏ ➤ {CR}\n'
-                    cc1 = f'🏷️ **Fɪʟᴇ ID : {str(count).zfill(3)}** \n\n📝 Tɪᴛʟᴇ :{name1} .pdf\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** :</b> {b_name}</blockquote>\n\n🎓 Exᴛʀᴀᴄᴛ Bʏ ➤ {CR}\n'
-                    cczip = f'🏷️ **Fɪʟᴇ ID : {str(count).zfill(3)}** \n\n💾 Tɪᴛʟᴇ :{name1} .zip\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** :</b> {b_name}</blockquote>\n\n🎓 Exᴛʀᴀᴄᴛ Bʏ ➤ {CR}\n'
-                    ccimg = f'🏷️ **Fɪʟᴇ ID : {str(count).zfill(3)}** \n\n🖼️ Tɪᴛʟᴇ :{name1} .jpg\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** :</b> {b_name}</blockquote>\n\n🎓 Exᴛʀᴀᴄᴛ Bʏ ➤ {CR}\n'
-                    ccm = f'🏷️ **Fɪʟᴇ ID : {str(count).zfill(3)}** \n\n🎵 Tɪᴛʟᴇ :{name1} .mp3\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** :</b> {b_name}</blockquote>\n\n🎓 Exᴛʀᴀᴄᴛ Bʏ➤ {CR}\n'
-                    cchtml = f'🏷️ **Fɪʟᴇ ID : {str(count).zfill(3)}** \n\n🌐 Tɪᴛʟᴇ :{name1} .html\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** :</b> {b_name}</blockquote>\n\n🎓 Exᴛʀᴀᴄᴛ Bʏ ➤ {CR}\n'
+                    cc = f'🏷️ **Fɪʟᴇ ID : {str(count).zfill(3)}** \n\n🎞️ **Tɪᴛʟᴇ :** {name1} [{res}p] .mp4\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** :</b> {b_name}</blockquote>\n\n🎓 **Exᴛʀᴀᴄᴛ Bʏ ➤ {CR}**\n'
+                    cc1 = f'🏷️ **Fɪʟᴇ ID : {str(count).zfill(3)}** \n\n📝 **Tɪᴛʟᴇ :** {name1} .pdf\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** :</b> {b_name}</blockquote>\n\n🎓 **Exᴛʀᴀᴄᴛ Bʏ ➤ {CR}**\n'
+                    cczip = f'🏷️ **Fɪʟᴇ ID : {str(count).zfill(3)}** \n\n💾 **Tɪᴛʟᴇ :** {name1} .zip\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** :</b> {b_name}</blockquote>\n\n**🎓 Exᴛʀᴀᴄᴛ Bʏ ➤ {CR}**\n'
+                    ccimg = f'🏷️ **Fɪʟᴇ ID : {str(count).zfill(3)}** \n\n🖼️ **Tɪᴛʟᴇ :** {name1} .jpg\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** :</b> {b_name}</blockquote>\n\n**🎓 Exᴛʀᴀᴄᴛ Bʏ ➤ {CR}**\n'
+                    ccm = f'🏷️ **Fɪʟᴇ ID : {str(count).zfill(3)}** \n\n🎵 **Tɪᴛʟᴇ :** {name1} .mp3\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** :</b> {b_name}</blockquote>\n\n**🎓 Exᴛʀᴀᴄᴛ Bʏ➤ {CR}**\n'
+                    cchtml = f'🏷️ **Fɪʟᴇ ID : {str(count).zfill(3)}** \n\n🌐 **Tɪᴛʟᴇ :** {name1} .html\n\n<blockquote><b>📚 **𝗕ᴀᴛᴄʜ** :</b> {b_name}</blockquote>\n\n**🎓 Exᴛʀᴀᴄᴛ Bʏ ➤ {CR}**\n'
           
                 if "drive" in url:
                     try:
