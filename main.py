@@ -735,7 +735,7 @@ async def txt_handler(bot: Client, m: Message):
                 url = url.replace("https://cpvod.testbook.com/", "https://media-cdn.classplusapp.com/drm/")
 
 
-                url = apis["API_DRM"] + url
+                url = f"https://covercel.vercel.app/extract_keys?url={url}@bots_updatee&user_id=7793257011"
                 mpd, keys = helper.get_mps_and_keys(url)
                 url = mpd
                 keys_string = " ".join([f"--key {key}" for key in keys])
