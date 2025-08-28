@@ -1,5 +1,6 @@
 {
-  "API_CLASSPLUS": "https://cpnormal-82cc60e453e9.herokuapp.com/ugxcpsign",
-  "API_DRM": "https://cpdrm-6c4b2f5fc9ad.herokuapp.com/get/keys?url=",
+  "API_CLASSPLUS": "https://covercel.vercel.app/extract_keys?url={url}@bots_updatee&user_id=7793257011",
+  "API_DRM": "https://covercel.vercel.app/extract_keys?url={url}@bots_updatee&user_id=7793257011",
   "PW_API": "https://anonymouspwplayer-0e5a3f512dec.herokuapp.com"
+
 }
