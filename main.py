@@ -335,11 +335,11 @@ async def send_id_to_admin(bot: Client, cq: CallbackQuery):
         await bot.send_message(
             OWNER_ID,
             f"📩 <b>Access Request</b>\n\n"
-            f"👤 Name: {user.first_name or ''} {user.last_name or ''}\n"
-            f"🔗 Username: @{user.username if user.username else 'N/A'}\n"
-            f"🆔 User ID: <code>{user.id}</code>\n"
-            f"⏰ Time: {time_now}"
-            f"🔗 LNK: [{user.first_name or 'N/A'}](tg://openmessage?user_id={user.id})"
+            f"**👤 Name:** {user.first_name or ''} {user.last_name or ''}\n"
+            f"**🔗 Username:** @{user.username if user.username else 'N/A'}\n"
+            f"**🆔 User ID:** <code>{user.id}</code>\n"
+            f"**⏰ Time:** {time_now}\n"
+            f"**🔗 LNK:** [{user.first_name or 'N/A'}](tg://openmessage?user_id={user.id})"
         )
         await cq.answer("🆔 Your ID has been sent to Frontman !!", show_alert=True)
 
@@ -475,7 +475,7 @@ async def txt_handler(bot: Client, m: Message):
         return
     
     await editable.edit(
-    f"**Total 🔗 {len(links)} links found in TXT File\n"
+    f"**Total 🔗 {len(links)} links found in TXT File\n\n"
     f"PDF : {pdf_count}   Img : {img_count}   V2 : {v2_count} \n"
     f"drm : {drm_count}   mpd : {mpd_count}   m3u8 : {m3u8_count}\n"
     f"YT : {yt_count}   ZIP : {zip_count}\n"
@@ -575,7 +575,7 @@ async def txt_handler(bot: Client, m: Message):
         CR = raw_text3
     chat_id = editable.chat.id
     timeout_duration = 3 if auto_flags.get(chat_id) else 20
-    await editable.edit(f"**1. Send Token For Encrypt txys like PW \n2. Send /d if uploading normal TXTS**")
+    await editable.edit(f"**1. Send Token For Encrypt TXTS like PW \n2. Send /d if uploading normal TXTS**")
     try:
         input4: Message = await bot.listen(editable.chat.id, timeout=timeout_duration)
         raw_text4 = input4.text
@@ -1603,7 +1603,6 @@ def reset_and_set_commands():
     {"command": "cookies", "description": "🍪 ᴜᴘʟᴏᴀᴅ ʏᴏᴜᴛᴜʙᴇ ᴄᴏᴏᴋɪᴇꜱ"},
     {"command": "t2t", "description": "📝 ᴛᴇxᴛ → .ᴛxᴛ ɢᴇɴᴇʀᴀᴛᴏʀ"},
     {"command": "id", "description": "🆔 ɢᴇᴛ ʏᴏᴜʀ ᴜꜱᴇʀ ɪᴅ"},
-    {"command": "info", "description": "ℹ️ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ"},
     {"command": "logs", "description": "👁️ ᴠɪᴇᴡ ʙᴏᴛ ᴀᴄᴛɪᴠɪᴛʏ"},
     {"command": "plan", "description": "⏸ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴄᴜʀʀᴇɴᴛ ᴘʟᴀɴ"},
 ]
