@@ -501,7 +501,7 @@ async def txt_handler(bot: Client, m: Message):
     
     chat_id = editable.chat.id
     timeout_duration = 3 if auto_flags.get(chat_id) else 20
-    await editable.edit(f"**Enter Batch Name or send `/d`**")
+    await editable.edit(f"**Enter Batch Name or send /d**")
     try:
         input1: Message = await bot.listen(editable.chat.id, timeout=timeout_duration)
         raw_text0 = input1.text
@@ -575,7 +575,7 @@ async def txt_handler(bot: Client, m: Message):
         CR = raw_text3
     chat_id = editable.chat.id
     timeout_duration = 3 if auto_flags.get(chat_id) else 20
-    await editable.edit(f"**1. Send Token For Encrypt txys like PW \n2. Send \d if uploading normal TXTS**")
+    await editable.edit(f"**1. Send Token For Encrypt txys like PW \n2. Send /d if uploading normal TXTS**")
     try:
         input4: Message = await bot.listen(editable.chat.id, timeout=timeout_duration)
         raw_text4 = input4.text
@@ -641,7 +641,7 @@ async def txt_handler(bot: Client, m: Message):
         await editable.edit("**⚠️ Error! Using default thumbnail.**")
         await asyncio.sleep(1)
  
-    await editable.edit("__**1. Send /d For Uploading Files In Chat\n2. Send Channel Id For Uploading in Channel 3. Send Group Id For Topic Wise Upload** \n\n<blockquote>Make Me Admin in your channel & send /id in channel after you get a numerical id send that me</blockquote>")
+    await editable.edit("__**1. Send /d For Uploading Files In Chat\n2. Send Channel Id For Uploading in Channel 3. Send Group Id For Topic Wise Upload** \n\n<blockquote>Make Me Admin in your channel or group\nsend /id in channel\nyou get a numerical id send that me</blockquote>")
     try:
         input7: Message = await bot.listen(editable.chat.id, timeout=timeout_duration)
         raw_text7 = input7.text
@@ -1585,7 +1585,7 @@ def notify_owner():
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
     data = {
         "chat_id": OWNER_ID,
-        "text": "BOT is Live Now\n Send /drm & Choose Quality\n Aur Maze kro"
+        "text": "BOT is Live Now 🤖\n\n📝 Send /drm & Choose Quality\n😎 Aur Maze kro"
     }
     requests.post(url, data=data)
 
