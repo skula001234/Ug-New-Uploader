@@ -108,10 +108,10 @@ async def progress_bar(current, total, reply, start):
 
     msg = (
         f"╭───⌯═════ 𝐁𝐎𝐓 𝐏𝐑𝐎𝐆𝐑𝐄𝐒𝐒 ═════⌯\n"
-        f"├  **{percent:.1f}%** `{progress_bar_str}`\n\n"
-        f"├ 🚀 𝗦𝗣𝗘𝗘𝗗 ➤ | {hrb(speed)}/s"
-        f"├ 📟 𝗣𝗥𝗢𝗖𝗘𝗦𝗦𝗘𝗗 ➤ | {hrb(current)}"
-        f"├ 🧲 𝗦𝗜𝗭𝗘 ➤ | {hrb(total)}"
+        f"├  **{percent:.1f}%** `{progress_bar_str}`\n├\n"
+        f"├ 🚀 𝗦𝗣𝗘𝗘𝗗 ➤ | {hrb(speed)}/s \n"
+        f"├ 📟 𝗣𝗥𝗢𝗖𝗘𝗦𝗦𝗘𝗗 ➤ | {hrb(current)} \n"
+        f"├ 🧲 𝗦𝗜𝗭𝗘 ➤ | {hrb(total)} \n"
         f"├ 🕑 𝗘𝗧𝗔 ➤ | {hrt(eta_seconds, 1)}\n"
         f"╰─═══ [⌯ FʀᴏɴᴛMᴀɴ | ×͜× |](https://t.me/mrfrontman001)═══─╯"
     )
@@ -120,4 +120,5 @@ async def progress_bar(current, total, reply, start):
         await reply.edit(msg)
     except FloodWait as e:
         time.sleep(e.x)
+
 
