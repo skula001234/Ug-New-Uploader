@@ -115,11 +115,11 @@ UNSPLASH_URL = "https://unsplash.com/napi/search/illustrations/related?query=nat
 
 
 # Inline keyboard for start command
-BUTTONSCONTACT = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url="https://t.me/ItsUGxBot")]])
+BUTTONSCONTACT = InlineKeyboardMarkup([[InlineKeyboardButton(text="📞 Contact", url="https://t.me/MrFrontMan001")]])
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/ItsUGxBot")        ],
+            InlineKeyboardButton(text="🛠️ Help", url="https://t.me/MrFrintMan001")        ],
     ]
 )
 
@@ -262,7 +262,7 @@ async def start(bot: Client, m: Message):
 
     if not is_authorized:
         await m.reply_photo(
-            photo=img_url,
+            photo= 'https://files.catbox.moe/1w7a78.jpg',
             caption=(
                 "𓆩🔒𓆪 **ᴀᴄᴄᴇꜱꜱ ʀᴇǫᴜɪʀᴇᴅ**\n\n"
                 "𓆩💰𓆪 **ᴘʀɪᴄɪɴɢ**\n"
