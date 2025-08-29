@@ -265,7 +265,9 @@ async def start(bot: Client, m: Message):
             photo=img_url,
             caption=(
                 "𓆩🔒𓆪 **ᴀᴄᴄᴇꜱꜱ ʀᴇǫᴜɪʀᴇᴅ**\n\n"
-                "ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ ᴛᴏ ɢᴇᴛ ᴀᴄᴄᴇꜱꜱ ✨"
+                "𓆩💰𓆪 **ᴘʀɪᴄɪɴɢ**\n"
+                "• 1 ᴡᴇᴇᴋ — ₹150\n"
+                "• 1 ᴍᴏɴᴛʜ — ₹400"
             ),
             reply_markup=InlineKeyboardMarkup([
                 [InlineKeyboardButton("📩 sᴇɴᴅ ɪᴅ", callback_data="send_id_admin")],
@@ -288,16 +290,10 @@ async def start(bot: Client, m: Message):
 
     features_list = (
         "𓆩💎𓆪 **ꜰᴇᴀᴛᴜʀᴇꜱ ʏᴏᴜ'ʟʟ ʟᴏᴠᴇ:**\n"
-        "➜ 🔓 • ᴀᴜᴛᴏ ᴅʀᴍ ᴅᴇᴄʀʏᴘᴛɪᴏɴ"
+        "➜ 🔓 • ᴀᴜᴛᴏ ᴅʀᴍ ᴅᴇᴄʀʏᴘᴛɪᴏɴ\n"
         "➜ ⚡ • ᴘʀᴇᴍɪᴜᴍ Qᴜᴀʟɪᴛʏ\n"
         "➜ 📚 • ʙᴀᴛᴄʜ ꜱᴜᴘᴘᴏʀᴛ\n"
         "➜ 🚀 • ᴜʟᴛʀᴀ-ꜰᴀꜱᴛ ꜱᴘᴇᴇᴅ\n"
-    )
-
-    pricing_list = (
-        "𓆩💰𓆪 **ᴘʀɪᴄɪɴɢ**\n"
-        "• 1 ᴡᴇᴇᴋ — ₹150\n"
-        "• 1 ᴍᴏɴᴛʜ — ₹400\n"
     )
 
     await m.reply_photo(
@@ -1591,7 +1587,7 @@ def notify_owner():
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
     data = {
         "chat_id": OWNER_ID,
-        "text": "**BOT is Live Now\n Send /drm & Choose Quality And Enjoy**"
+        "text": "BOT is Live Now\n Send /drm & Choose Quality\n Aur Maze kro"
     }
     requests.post(url, data=data)
 
