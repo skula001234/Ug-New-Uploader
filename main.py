@@ -299,13 +299,11 @@ async def start(bot: Client, m: Message):
     await m.reply_photo(
         photo=img_url,
         caption=(
-            f"𓆩👋𓆪 **ᴡᴇʟᴄᴏᴍᴇ {first_name}!**\n\n"
-            f"{commands_list}\n"
+            f"╭━━━━━━━━━━━━━━━━━━━━╮\n┃  ✨ ʜᴇʏ {first_name} ❤️\n┃  🦎 ɪ'ᴍ ʏᴏᴜʀ ᴅʀᴍ ᴡɪᴢᴀʀᴅ!\n╰━━━━━━━━━━━━━━━━━━━━╯**\n\n"
             f"{features_list}\n"
-            f"{pricing_list}"
         ),
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("📚 ʜᴇʟᴘ", url="https://t.me/ItsUGxBot")]
+            [InlineKeyboardButton("✨ ᴄᴏɴᴛᴀᴄᴛ", url="https://t.me/ItsUGxBot")]
         ])
     )
 
