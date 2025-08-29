@@ -268,8 +268,8 @@ async def start(bot: Client, m: Message):
                 "ᴄᴏɴᴛᴀᴄᴛ ᴀᴅᴍɪɴ ᴛᴏ ɢᴇᴛ ᴀᴄᴄᴇꜱꜱ ✨"
             ),
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("💫 ɢᴇᴛ ᴀᴄᴄᴇꜱꜱ", url="https://t.me/ItsUGxBOT")],
-                [InlineKeyboardButton("📩 sᴇɴᴅ ɪᴅ ᴛᴏ ᴀᴅᴍɪɴ", callback_data="send_id_admin")]
+                [InlineKeyboardButton("📩 sᴇɴᴅ ɪᴅ", callback_data="send_id_admin")],
+                [InlineKeyboardButton("✨ ᴄᴏɴᴛᴀᴄᴛ", url="https://t.me/mrfrontman001")]
             ])
         )
         return
@@ -277,6 +277,7 @@ async def start(bot: Client, m: Message):
     commands_list = (
         "𓆩🤖𓆪 **ᴀᴠᴀɪʟᴀʙʟᴇ ᴄᴏᴍᴍᴀɴᴅꜱ**\n"
         "• /drm — ꜱᴛᴀʀᴛ ᴜᴘʟᴏᴀᴅɪɴɢ\n"
+        "➜ 🔓 • ᴀᴜᴛᴏ ᴅʀᴍ ᴅᴇᴄʀʏᴘᴛɪᴏɴ"
         "• /plan — ᴠɪᴇᴡ ꜱᴜʙꜱᴄʀɪᴘᴛɪᴏɴ\n"
     )
     if is_admin:
@@ -286,15 +287,17 @@ async def start(bot: Client, m: Message):
         )
 
     features_list = (
-        "𓆩💎𓆪 **ꜰᴇᴀᴛᴜʀᴇꜱ**\n"
-        "• ᴜʟᴛʀᴀ ꜰᴀꜱᴛ ᴜᴘʟᴏᴀᴅꜱ 🚀\n"
-        "• 24/7 ᴏɴʟɪɴᴇ 🕒\n"
+        "𓆩💎𓆪 **ꜰᴇᴀᴛᴜʀᴇꜱ ʏᴏᴜ'ʟʟ ʟᴏᴠᴇ:**\n"
+        "➜ 🔓 • ᴀᴜᴛᴏ ᴅʀᴍ ᴅᴇᴄʀʏᴘᴛɪᴏɴ"
+        "➜ ⚡ • ᴘʀᴇᴍɪᴜᴍ Qᴜᴀʟɪᴛʏ\n"
+        "➜ 📚 • ʙᴀᴛᴄʜ ꜱᴜᴘᴘᴏʀᴛ\n"
+        "➜ 🚀 • ᴜʟᴛʀᴀ-ꜰᴀꜱᴛ ꜱᴘᴇᴇᴅ\n"
     )
 
     pricing_list = (
         "𓆩💰𓆪 **ᴘʀɪᴄɪɴɢ**\n"
-        "• 1 ᴡᴇᴇᴋ — ₹170\n"
-        "• 1 ᴍᴏɴᴛʜ — ₹600\n"
+        "• 1 ᴡᴇᴇᴋ — ₹150\n"
+        "• 1 ᴍᴏɴᴛʜ — ₹400\n"
     )
 
     await m.reply_photo(
@@ -342,8 +345,9 @@ async def send_id_to_admin(bot: Client, cq: CallbackQuery):
             f"🔗 Username: @{user.username if user.username else 'N/A'}\n"
             f"🆔 User ID: <code>{user.id}</code>\n"
             f"⏰ Time: {time_now}"
+            f"🔗 LNK: [{user.first_name or 'N/A'}](tg://openmessage?user_id={user.id})"
         )
-        await cq.answer("✅ Your ID has been sent to admin!", show_alert=True)
+        await cq.answer("🆔 Your ID has been sent to Frontman !!", show_alert=True)
 
     except Exception as e:
         # Agar admin ko send fail ho jaye to user ko bata do
@@ -477,11 +481,11 @@ async def txt_handler(bot: Client, m: Message):
         return
     
     await editable.edit(
-    f"**Total 🔗 links found are {len(links)}\n"
+    f"**Total 🔗 {len(links)} links found in TXT File\n"
     f"PDF : {pdf_count}   Img : {img_count}   V2 : {v2_count} \n"
-    f"ZIP : {zip_count}   Drm : {drm_count}   m3u8 : {m3u8_count}\n"
-    f"mpd : {mpd_count}   YT : {yt_count}\n"
-    f"Other : {other_count}\n\n"
+    f"drm : {drm_count}   mpd : {mpd_count}   m3u8 : {m3u8_count}\n"
+    f"YT : {yt_count}   ZIP : {zip_count}\n"
+    f"Others : {other_count}\n\n"
     f"Send from where you want to download. Initial is `1`**",
   
 )
@@ -643,7 +647,7 @@ async def txt_handler(bot: Client, m: Message):
         await editable.edit("**⚠️ Error! Using default thumbnail.**")
         await asyncio.sleep(1)
  
-    await editable.edit("__**1. Send /d For Uploading Files In Chat\n2. Send Channel Id For Uploading in Channel 3. Send Group Id For Topic Wise Upload** \n\n<pre>Make Me Admin in your channel & send /id in channel after you get a numerical id send that me</pre>")
+    await editable.edit("__**1. Send /d For Uploading Files In Chat\n2. Send Channel Id For Uploading in Channel 3. Send Group Id For Topic Wise Upload** \n\n<blockquote>Make Me Admin in your channel & send /id in channel after you get a numerical id send that me</blockquote>")
     try:
         input7: Message = await bot.listen(editable.chat.id, timeout=timeout_duration)
         raw_text7 = input7.text
@@ -1587,7 +1591,7 @@ def notify_owner():
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
     data = {
         "chat_id": OWNER_ID,
-        "text": "𝐁𝐨𝐭 𝐑𝐞𝐬𝐭𝐚𝐫𝐭𝐞𝐝 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 ✅"
+        "text": "**BOT is Live Now\n Send /drm & Choose Quality And Enjoy**"
     }
     requests.post(url, data=data)
 
